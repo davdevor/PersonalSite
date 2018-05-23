@@ -8,19 +8,14 @@ namespace PersonalSite.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
-        {
-            return View("About");
-        }
 
         public ViewResult ContactInfo()
         {
             return View();
         }
-        public ViewResult About()
+        public ViewResult About(bool showResume = true)
         {
-            return View();
+            return View(showResume);
         }
 
         public ViewResult Projects()

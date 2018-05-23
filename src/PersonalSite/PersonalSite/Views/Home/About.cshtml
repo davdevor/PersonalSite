@@ -1,6 +1,18 @@
-﻿@{
+﻿@model bool
+@{
     ViewBag.Title = "About";
 }
 
-put paragraph about me and resume
-@Html.Action("Resume")
+put paragraph about
+<br />
+@Html.ActionLink("Show/Hide","About",new { showResume = !Model},new { @class = "btn btn-default"})
+@if (Model)
+{
+    <div class="row">
+        <div class="container-fluid col-8">
+            @Html.Action("Resume")
+        </div>
+        <div class="col-4"></div>
+    </div>
+}
+
