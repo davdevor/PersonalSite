@@ -22,14 +22,17 @@ namespace PersonalSite.Controllers
         {
             return View();
         }
-        public ViewResult Experience()
-        {
-            return View();
-        }
 
         public ViewResult Resume()
         {
             return View();
+        }
+
+        public FilePathResult DownloadResume()
+        {
+            var x = new FilePathResult(string.Format(@"~\Files\{0}", "David Devore Resume" + ".docx"), "application/msword");
+            x.FileDownloadName="David Devore Resume.docx";
+            return x; 
         }
     }
 }

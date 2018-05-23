@@ -1,5 +1,6 @@
-﻿<div class="row">
-    <div class="container-fluid col-6" style="font-family:Calibri;font-size:inherit; border:solid 1px black; padding:20px; margin-top:10px ">
+﻿@{ViewBag.Title = "Resume";}
+<div class="row">
+    <div class="container col-6" style="font-family:Calibri;font-size:inherit; border:solid 1px black; padding:20px; margin-top:10px;">
         <div class="text-center">
             <strong>David Russell Devore</strong>
             <p>
@@ -70,4 +71,7 @@
             </ul>
         </div>
     </div>
+</div>
+<div class="row">
+    <button class="rounded download-link mx-auto" style="margin-top:5px" onclick="location.href='@Url.Action("DownloadResume")'">Download Here</button> 
 </div>

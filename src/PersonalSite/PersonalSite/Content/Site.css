@@ -1,7 +1,16 @@
 ﻿body {
     padding-bottom: 20px;
 }
-
+.mylabel {
+    background-color: lightslategrey;
+    padding: 4px;
+    color: white;
+}
+.download-link {
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
