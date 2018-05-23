@@ -30,7 +30,9 @@ namespace PersonalSite.Controllers
 
         public FilePathResult DownloadResume()
         {
-            var x = new FilePathResult(string.Format(@"~\Files\{0}", "David Devore Resume" + ".docx"), "application/msword");
+            // first arg is for file name the second one is for the type of file it is
+            var x = new FilePathResult(string.Format(@"~\Files\{0}", "David Devore Resume.docx"), "application/msword");
+            // have to set the download Name otherwise it sets it the methodname
             x.FileDownloadName="David Devore Resume.docx";
             return x; 
         }
