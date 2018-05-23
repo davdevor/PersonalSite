@@ -13,9 +13,9 @@ namespace PersonalSite.Controllers
         {
             return View();
         }
-        public ViewResult About(bool showResume = true)
+        public ViewResult About()
         {
-            return View(showResume);
+            return View();
         }
 
         public ViewResult Projects()
@@ -27,9 +27,9 @@ namespace PersonalSite.Controllers
             return View();
         }
 
-        public PartialViewResult Resume()
+        public ViewResult Resume()
         {
-            return PartialView();
+            return View();
         }
     }
 }
