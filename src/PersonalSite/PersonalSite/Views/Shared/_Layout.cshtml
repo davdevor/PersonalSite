@@ -23,13 +23,30 @@
         @RenderBody()
         <hr />
         <footer>
-            <div class="text-center">
-                David Devore - 2018
+            <div class="text-center" style="font-size:small">
+                &copy; David Devore. Created with ASP.Net MVC - 2018    
+                <a style="margin-left:5px" href="https://github.com/davdevor" target="_blank"><img src="~/Files/GitHub-Mark-32px.png" id="githubIcon" /></a>
+                <a style="margin-left:5px" href="http://www.linkedin.com/in/david-devore-774236127" target="_blank"><img src="~/Files/In-Black-34px-R.png" id="linkedinIcon" /></a>
             </div>
         </footer>
     </div>
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        var image1 = document.getElementById("githubIcon");
+        var image2 = document.getElementById("linkedinIcon")
+        makeOpaque(image1);
+        makeOpaque(image2);
+
+        function makeOpaque(image) {
+            image.addEventListener("mouseover", function () {
+                image.className = "img-opaque";
+            });
+            image.addEventListener("mouseout", function () {
+                image.className = "";
+            });
+        }
+    </script>
 </body>
 </html>
