@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-
+// for bundleconfig
+using System.Web.Optimization;
+using PersonalSite.App_Start;
 namespace PersonalSite
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -13,6 +15,7 @@ namespace PersonalSite
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

@@ -14,10 +14,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!--
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet"/>
+    -->
+    @System.Web.Optimization.Styles.Render("~/Content/bundle")
 
 </head>
 <body style="background-color:#E2E2E2">
@@ -40,9 +42,13 @@
             </div>
         </footer>
     </div>
-
+    <!-- replacing these
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+        -->
+    @System.Web.Optimization.Scripts.Render("~/Scripts/ThirdParty")
+
+
     <script>
         var image1 = document.getElementById("githubIcon");
         var image2 = document.getElementById("linkedinIcon")
