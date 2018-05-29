@@ -45,24 +45,11 @@
     <!-- replacing these
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/sitescripts.js"></script>
         -->
     @System.Web.Optimization.Scripts.Render("~/Scripts/ThirdParty")
 
 
-    <script>
-        var image1 = document.getElementById("githubIcon");
-        var image2 = document.getElementById("linkedinIcon")
-        makeOpaque(image1);
-        makeOpaque(image2);
-
-        function makeOpaque(image) {
-            image.addEventListener("mouseover", function () {
-                image.className = "img-opaque";
-            });
-            image.addEventListener("mouseout", function () {
-                image.className = "";
-            });
-        }
-    </script>
+    
 </body>
 </html>
