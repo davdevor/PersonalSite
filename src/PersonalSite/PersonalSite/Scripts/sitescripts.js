@@ -6,10 +6,10 @@ gtag('config', 'UA-119836223-1');
 
 var githubImage = document.getElementById("githubIcon");
 var linkedinImage = document.getElementById("linkedinIcon")
-makeOpaque(linkedinImage);
-makeOpaque(githubImage);
+makeOpaqueListener(linkedinImage);
+makeOpaqueListener(githubImage);
 
-function makeOpaque(image) {
+function makeOpaqueListener(image) {
     image.addEventListener("mouseover", function () {
         image.className = "img-opaque";
     });
