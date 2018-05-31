@@ -1,5 +1,12 @@
 ﻿body {
+    background-color: #E2E2E2;
     padding-bottom: 20px;
+}
+.background-primary{
+    background-color: lightslategrey;
+}
+.text-white{
+    color: white;
 }
 .mylabel {
     background-color: lightslategrey;
@@ -13,6 +20,24 @@
     color: white;
     text-decoration: none;
     cursor:pointer;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.ml5{
+    margin-left: 5px;
+}
+.pd5{
+    padding: 5px;
+}
+.font-small{
+    font-size:small;
+}
+.hidden{
+    visibility: hidden;
 }
 #resumePdfObject {
     width: 100%;

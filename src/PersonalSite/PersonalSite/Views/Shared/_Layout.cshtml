@@ -11,23 +11,23 @@
     @System.Web.Optimization.Styles.Render("~/Content/sitecss")
 
 </head>
-<body style="background-color:#E2E2E2">
-    <nav class="navbar navbar-expand-sm justify-content-center" style="background-color:lightslategrey">
+<body>
+    <nav class="navbar navbar-expand-sm justify-content-center background-primary">
         <ul class="navbar-nav">
-            <li class="nav-item">@Html.ActionLink("About", "About", null, new { @class = "btn btn-default btn-sm", style = "color:white" })</li>
-            <li class="nav-item">@Html.ActionLink("Projects", "Projects", null, new { @class = "btn btn-default btn-sm", style = "color:white" })</li>
-            <li class="nav-item">@Html.ActionLink("Resume", "Resume", null, new { @class = "btn btn-default btn-sm", style = "color:white" })</li>
-            <li class="nav-item">@Html.ActionLink("Contact Info", "ContactInfo", null, new { @class = "btn btn-default btn-sm", style = "color:white" })</li>
+            <li class="nav-item">@Html.ActionLink("About", "About", null, new { @class = "btn btn-default btn-sm text-white"})</li>
+            <li class="nav-item">@Html.ActionLink("Projects", "Projects", null, new { @class = "btn btn-default btn-sm text-white"})</li>
+            <li class="nav-item">@Html.ActionLink("Resume", "Resume", null, new { @class = "btn btn-default btn-sm text-white"})</li>
+            <li class="nav-item">@Html.ActionLink("Contact Info", "ContactInfo", null, new { @class = "btn btn-default btn-sm text-white"})</li>
         </ul>
     </nav>
     <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>
-            <div class="text-center" style="font-size:small">
+            <div class="text-center font-small">
                 &copy; David Devore. Created with ASP.Net MVC - 2018
-                <a style="margin-left:5px" href="https://github.com/davdevor" target="_blank"><img src="~/Files/GitHub-Mark-32px.png" id="githubIcon" /></a>
-                <a style="margin-left:5px" href="http://www.linkedin.com/in/david-devore-774236127" target="_blank"><img src="~/Files/In-Black-34px-R.png" id="linkedinIcon" /></a>
+                <a class="ml5" href="https://github.com/davdevor" target="_blank"><img src="~/Files/GitHub-Mark-32px.png" id="githubIcon" /></a>
+                <a class="ml5" href="http://www.linkedin.com/in/david-devore-774236127" target="_blank"><img src="~/Files/In-Black-34px-R.png" id="linkedinIcon" /></a>
             </div>
         </footer>
     </div>
