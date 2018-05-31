@@ -4,6 +4,9 @@ gtag('js', new Date());
 
 gtag('config', 'UA-119836223-1');
 
+$(document).ready(function () {
+    console.log("document loaded");
+});
 var githubImage = document.getElementById("githubIcon");
 var linkedinImage = document.getElementById("linkedinIcon")
 makeOpaqueListener(linkedinImage);
