@@ -16,12 +16,14 @@ function addHoverToNavButtons(idsArray) {
     var tempButton;
     for (i = 0; i < idsArray.length; ++i) {
         tempButton = document.getElementById(idsArray[i]);
-        tempButton.addEventListener("mouseover", function () {
-            this.className = "btn btn-default btn-sm text-white background-secondary";
-        });
-        tempButton.addEventListener("mouseout",function(){
-            this.className = "btn btn-default btn-sm text-white";
-        })
+        if (tempButton != null) {
+            tempButton.addEventListener("mouseover", function () {
+                this.className = "btn btn-default btn-sm text-white background-secondary";
+            });
+            tempButton.addEventListener("mouseout", function () {
+                this.className = "btn btn-default btn-sm text-white";
+            })
+        }
     }
 }
 function makeOpaqueListener(image) {
