@@ -5,6 +5,18 @@
     background-color: lightslategrey;
     padding: 4px;
     color: white;
+    text-decoration: none
+}
+.mylabel-hover {
+    background-color: darkorange;
+    padding: 4px;
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+}
+#resumePdfObject {
+    width: 100%;
+    height: 100vh
 }
 .download-link {
     background-color: darkorange;
@@ -29,4 +41,7 @@ div.resume {
 }
 .img-opaque {
     opacity: .2;
+}
+.label-opaque{
+    opacity: .7;
 }

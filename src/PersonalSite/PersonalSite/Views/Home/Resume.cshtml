@@ -1,5 +1,5 @@
 ﻿@{ViewBag.Title = "Resume";}
-<object class="hidden-sm hidden-xs" data="~/Files/David Devore Resume.pdf" type="application/pdf" internalinstanceid="13" style="width:100%;height:100vh;">
+<object class="hidden-sm hidden-xs" data="~/Files/David Devore Resume.pdf" type="application/pdf" internalinstanceid="13" id ="resumePdfObject">
     <p>
         It appears you don't have a PDF plugin for this browser.
         <a href="BoardingAgreement.pdf">
@@ -9,5 +9,5 @@
     </p>
 </object>
 <div class="row">
-    <button class="rounded download-link mx-auto" style="margin-top:5px" onclick="location.href='@Url.Action("DownloadResume")'">Download Here</button>
+    <label class="rounded mylabel mx-auto" id="downloadresumelabel" data-link="/Home/DownloadResume">Download Here</label>
 </div>
