@@ -154,7 +154,7 @@
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\projectscripts.js" />
     <Content Include="Scripts\resumescript.js" />
-    <Content Include="Scripts\sitescripts.js" />
+    <Content Include="Scripts\layoutscripts.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />

@@ -5,6 +5,9 @@
 .background-primary{
     background-color: lightslategrey;
 }
+.background-secondary{
+    background-color: darkorange;
+}
 .text-white{
     color: white;
 }

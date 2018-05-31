@@ -1,7 +1,6 @@
 ﻿var idArray = ["personalsitelabel", "poetrylabel", "geneticlabel", "recipielabel", "equationlabel"];
 var labelArray = setupLabels(idArray);
 function setupLabels(idsArray) {
-    var labelArray = new Array();
     var tempLabel;
     for (i = 0; i < idsArray.length; ++i) {
         tempLabel = document.getElementById(idsArray[i]);
