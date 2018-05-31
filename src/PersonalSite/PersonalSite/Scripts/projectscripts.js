@@ -4,10 +4,13 @@ function setupLabels(idsArray) {
     var tempLabel;
     for (i = 0; i < idsArray.length; ++i) {
         tempLabel = document.getElementById(idsArray[i]);
-        changeLabelClassOnMouse(tempLabel);
-        tempLabel.addEventListener("click", function () {
-            window.open(this.dataset.link);
-        })
+        if (tempLabel != null) {
+            changeLabelClassOnMouse(tempLabel);
+            tempLabel.addEventListener("click", function () {
+                window.open(this.dataset.link);
+            });
+        }
+        
     }
 }
 function changeLabelClassOnMouse(label) {
