@@ -15,7 +15,7 @@ namespace PersonalSite.App_Start
             bundles.Add(new ScriptBundle("~/Scripts/sitescripts").Include("~/Scripts/sitescripts.js"));
             bundles.Add(new StyleBundle("~/Content/bootstrapcss", "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css").Include("~/Content/bootstrap.min.css"));
             bundles.Add(new StyleBundle("~/Content/sitecss").Include("~/Content/Site.css"));
-#if NDEBUG
+#if !DEBUG
             BundleTable.EnableOptimizations = true;
             bundles.UseCdn = true;
 # endif
