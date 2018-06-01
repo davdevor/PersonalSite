@@ -14,9 +14,9 @@
 <body>
     <nav class="navbar navbar-expand-sm justify-content-center background-primary">
         <ul class="navbar-nav">
-            <li class="nav-item">@Html.ActionLink("About", "About", null, new { @class = "btn btn-default btn-sm text-white",id = "nv1"})</li>
-            <li class="nav-item">@Html.ActionLink("Projects", "Projects", null, new { @class = "btn btn-default btn-sm text-white", id = "nv2"})</li>
-            <li class="nav-item">@Html.ActionLink("Resume", "Resume", null, new { @class = "btn btn-default btn-sm text-white", id = "nv3"})</li>
+            <li class="nav-item">@Html.ActionLink("About", "About", null, new { @class = "btn btn-default btn-sm text-white", id = "nv1" })</li>
+            <li class="nav-item">@Html.ActionLink("Projects", "Projects", null, new { @class = "btn btn-default btn-sm text-white", id = "nv2" })</li>
+            <li class="nav-item">@Html.ActionLink("Resume", "Resume", null, new { @class = "btn btn-default btn-sm text-white", id = "nv3" })</li>
             <li class="nav-item">@Html.ActionLink("Contact Info", "ContactInfo", null, new { @class = "btn btn-default btn-sm text-white", id = "nv4" })</li>
         </ul>
     </nav>
@@ -34,6 +34,16 @@
     @System.Web.Optimization.Scripts.Render("~/Scripts/jquery")
     @System.Web.Optimization.Scripts.Render("~/Scripts/bootstrapjs")
     @System.Web.Optimization.Scripts.Render("~/Scripts/layoutscripts")
+    <script>
+        (function (helper) {
+            $(function () {
+                helper.linkedinImageId = "linkedinIcon";
+                helper.githubImageId = "githubIcon";
+                helper.navbuttonsIds = ["nv1", "nv2", "nv3", "nv4"];
+                helper.onready();
+            });
+        }(LayoutHelper));
+    </script>
     @RenderSection("Scripts", false);
 </body>
 </html>

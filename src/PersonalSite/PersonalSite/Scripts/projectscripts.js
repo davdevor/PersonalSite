@@ -12,7 +12,7 @@
     // private
     function setupLabels(idsArray) {
         var tempLabel;
-        for (i = 0; i < idsArray.length; ++i) {
+        for (var i = 0; i < idsArray.length; ++i) {
             tempLabel = $('#'+idsArray[i])[0];
 
             changeLabelClassOnMouse(tempLabel);

@@ -1,36 +1,83 @@
-﻿window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
+﻿
 
-gtag('config', 'UA-119836223-1');
+var LayoutHelper = (function ($) {
+    "use strict";
+    var module = {
+        navbuttonsIds: null,
+        githubImageId: null,
+        linkedinImageId: null,
+        lastClicked: null,
+        onready: function () {
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-119836223-1');
 
-$(document).ready(function () {});
-var githubImage = document.getElementById("githubIcon");
-var linkedinImage = document.getElementById("linkedinIcon")
-makeOpaqueListener(linkedinImage);
-makeOpaqueListener(githubImage);
+            $(document).ready(function () { });
+            makeOpaqueListener($('#' +this.linkedinImageId)[0]);
+            makeOpaqueListener($('#' +this.githubImageId)[0]);
+            addHoverToNavButtons(this.navbuttonsIds);
+            checkActiveNavButtons();
+        }
+    };
+    return module;
 
-var navbuttonsIds = ["nv1", "nv2", "nv3", "nv4"];
-addHoverToNavButtons(navbuttonsIds);
-function addHoverToNavButtons(idsArray) {
-    var tempButton;
-    for (i = 0; i < idsArray.length; ++i) {
-        tempButton = document.getElementById(idsArray[i]);
-        if (tempButton != null) {
+    // private
+    function checkActiveNavButtons() {
+        var segments = window.location.href.split("/");
+        var buttonId;
+        var i = 3;
+        if (segments.length > 4) {
+            i = 4;
+        }
+        switch (segments[i]) {
+            case "About":
+            case "":
+            case "Home":
+                buttonId = 0;
+                break;
+            case "Projects":
+                buttonId = 1;
+                break;
+            case "Resume":
+                buttonId = 2;
+                break;
+            case "Contact":
+                buttonId = 3;
+                break;
+            default:
+                buttonId = -1;
+                break;
+        }
+        if (buttonId != -1) {
+            document.getElementById(module.navbuttonsIds[buttonId]).className = "btn btn-default btn-sm text-white background-secondary";
+        }
+    }
+    function addHoverToNavButtons(idsArray) {
+        var tempButton;
+        for (var i = 0; i < idsArray.length; ++i) {
+            tempButton = document.getElementById(idsArray[i]);
             tempButton.addEventListener("mouseover", function () {
                 this.className = "btn btn-default btn-sm text-white background-secondary";
             });
             tempButton.addEventListener("mouseout", function () {
                 this.className = "btn btn-default btn-sm text-white";
-            })
+                checkActiveNavButtons();
+            });
+            tempButton.addEventListener("click", function () {
+                module.lastClicked = this.id;
+                var x = 5;
+            });
+            
         }
     }
-}
-function makeOpaqueListener(image) {
-    image.addEventListener("mouseover", function () {
-        image.className = "img-opaque";
-    });
-    image.addEventListener("mouseout", function () {
-        image.className = "";
-    });
-}
+    function makeOpaqueListener(image) {
+        image.addEventListener("mouseover", function () {
+            image.className = "img-opaque";
+        });
+        image.addEventListener("mouseout", function () {
+            image.className = "";
+        });
+    }
+})(jQuery);
