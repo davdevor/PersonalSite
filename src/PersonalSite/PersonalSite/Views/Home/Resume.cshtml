@@ -11,3 +11,14 @@
 <div class="row">
     <label class="rounded mylabel mx-auto" id="downloadresumelabel" data-link="/Home/DownloadResume">Download Here</label>
 </div>
+@section scripts{
+    @System.Web.Optimization.Scripts.Render("~/Scripts/resumescripts")
+    <script>
+        (function (helper) {
+            $(function () {
+                helper.downloadresumeId = "downloadresumelabel";
+                helper.onready();
+            });
+        }(ResumeHelper));
+    </script>
+    }
