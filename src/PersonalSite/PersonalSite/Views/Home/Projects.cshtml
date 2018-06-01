@@ -52,3 +52,15 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    
+    @System.Web.Optimization.Scripts.Render("~/Scripts/projectscripts")
+    <script>
+        (function (helper) {
+            $(function () {
+                helper.idsArray = ["personalsitelabel", "poetrylabel", "geneticlabel", "recipielabel", "equationlabel"];
+                helper.onready();
+            });
+        }(ProjectHelper));
+    </script>
+}
