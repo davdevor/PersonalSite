@@ -51,7 +51,7 @@ var LayoutHelper = (function ($) {
                 break;
         }
         if (buttonId != -1) {
-            document.getElementById(module.navbuttonsIds[buttonId]).className = "btn btn-default btn-sm text-white background-secondary";
+            document.getElementById(module.navbuttonsIds[buttonId]).className = "btn btn-default btn-sm text-white background-secondary mg2";
         }
     }
     function addHoverToNavButtons(idsArray) {
@@ -59,10 +59,10 @@ var LayoutHelper = (function ($) {
         for (var i = 0; i < idsArray.length; ++i) {
             tempButton = document.getElementById(idsArray[i]);
             tempButton.addEventListener("mouseover", function () {
-                this.className = "btn btn-default btn-sm text-white background-secondary";
+                this.className = "btn btn-default btn-sm text-white background-secondary mg2";
             });
             tempButton.addEventListener("mouseout", function () {
-                this.className = "btn btn-default btn-sm text-white";
+                this.className = "btn btn-default btn-sm text-white mg2";
                 checkActiveNavButtons();
             });
             tempButton.addEventListener("click", function () {

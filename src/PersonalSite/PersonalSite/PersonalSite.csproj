@@ -193,6 +193,7 @@
     <Content Include="Views\Home\Resume.cshtml" />
     <Content Include="Views\Error\_404Error.cshtml" />
     <Content Include="Views\Error\_500Error.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
