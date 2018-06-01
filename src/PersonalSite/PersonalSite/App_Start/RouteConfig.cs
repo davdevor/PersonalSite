@@ -13,8 +13,8 @@ namespace PersonalSite
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(name: "Contact", url: "Contact", defaults: new { controller = "Home", action = "ContactInfo" });
-            routes.MapRoute(name: "Home", url: "{action}", defaults: new { controller = "Home" });
-            
+            routes.MapRoute(name: "Home", url: "Home", defaults: new { controller = "Home", action = "about" });
+            routes.MapRoute(name: "HomeAction", url: "{action}", defaults: new { controller = "Home" });
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

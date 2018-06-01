@@ -24,7 +24,7 @@
         <div class="container-fluid col-6">
             <label class="rounded mylabel" id="geneticlabel" data-link="https://github.com/davdevor/DistributedSystemsProject">Parallel Implementation of a Genetic Algorithm</label>
             <p>
-                This project was made for my Distributed Systems course. The project was to take a <a href="https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3"target="_blank">genetic algorithm</a> that solves The Traveling salesperson problem, and 
+                This project was made for my Distributed Systems course. The project was to take a <a href="https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3"target="_blank">genetic algorithm</a> that solves The Traveling Salesperson problem, and 
                 to make the algorithm run in parallel. We used C++ to implement the genetic algorithm and to run it in parallel we used <a href="https://en.wikipedia.org/wiki/OpenMP"target="_blank">OpenMP</a>.
             </p>
         </div>
@@ -52,3 +52,15 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    
+    @System.Web.Optimization.Scripts.Render("~/Scripts/projectscripts")
+    <script>
+        (function (helper) {
+            $(function () {
+                helper.idsArray = ["personalsitelabel", "poetrylabel", "geneticlabel", "recipielabel", "equationlabel"];
+                helper.onready();
+            });
+        }(ProjectHelper));
+    </script>
+}
