@@ -3,13 +3,12 @@
     var module = {
         idsArray: null,
         onready: function () {
-            $(document).ready(function () { });
             setupLabels(this.idsArray);
         }
     };
     return module;
 
-    // private
+    // this method gets the labels for each prject and adds the hover and click events
     function setupLabels(idsArray) {
         var tempLabel;
         for (var i = 0; i < idsArray.length; ++i) {
@@ -17,6 +16,7 @@
 
             changeLabelClassOnMouse(tempLabel);
             tempLabel.addEventListener("click", function () {
+                // gets the data-link data from the label element
                 window.open(this.dataset.link);
             });
         }
