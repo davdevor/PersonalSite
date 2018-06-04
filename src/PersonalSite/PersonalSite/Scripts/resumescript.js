@@ -14,6 +14,7 @@
                 downloadresumelabel.className = "rounded mx-auto mylabel";
             });
             downloadresumelabel.addEventListener("click", function () {
+                ga('send', 'event', 'Resume Downloads', 'Click', 'Resume Download');
                 window.location = "Home/DownloadResume";
             });
         }
