@@ -5,10 +5,6 @@
         githubImageId: null,
         linkedinImageId: null,
         onready: function () {
-
-           
-
-
             makeOpaqueListener($('#' + this.linkedinImageId)[0]);
             makeOpaqueListener($('#' + this.githubImageId)[0]);
             checkActiveNavButtons();
@@ -17,8 +13,8 @@
     };
     return module;
 
-    // private
-
+    // this method sets the active nav button based on the url
+    // it gets the action and sets the active button based on that
     function checkActiveNavButtons() {
         var segments = window.location.href.split("/");
         var buttonId;
