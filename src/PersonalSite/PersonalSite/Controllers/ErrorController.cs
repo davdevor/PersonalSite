@@ -24,7 +24,6 @@ namespace PersonalSite.Controllers
         }
 
 #if DEBUG
-
         public ActionResult Throw404Error()
         {
             throw new HttpException(404, "404 Error");
