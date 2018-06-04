@@ -1,6 +1,4 @@
-﻿
-
-var LayoutHelper = (function ($) {
+﻿var LayoutHelper = (function ($) {
     "use strict";
     var module = {
         navbuttonsIds: null,
@@ -55,12 +53,10 @@ var LayoutHelper = (function ($) {
                 break;
         }
         if (buttonId != -1) {
-            document.getElementById(module.navbuttonsIds[i]).className = "primary background-secondary btn btn-default btn-sm text-white mg2";
+            document.getElementById(module.navbuttonsIds[buttonId]).className = "primary background-secondary btn btn-default btn-sm text-white mg2";
         }
-
-
-
     }
+
     function addHoverToNavButtons(idsArray) {
         var tempButton;
         for (var i = 0; i < idsArray.length; ++i) {
