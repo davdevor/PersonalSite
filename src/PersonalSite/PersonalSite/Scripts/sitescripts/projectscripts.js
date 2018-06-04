@@ -21,6 +21,7 @@
             });
         }
     }
+    // this method adds the hover effects to the labels
     function changeLabelClassOnMouse(label) {
         label.addEventListener("mouseover", function () {
             label.className = "rounded mylabel-hover";

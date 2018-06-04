@@ -15,6 +15,8 @@
             });
             downloadresumelabel.addEventListener("click", function () {
                 ga('send', 'event', 'Resume Downloads', 'Click', 'Resume Download');
+                // sets the location of the current window
+                // routes handle it going to the action method to download the pdf
                 window.location = "Home/DownloadResume";
             });
         }
