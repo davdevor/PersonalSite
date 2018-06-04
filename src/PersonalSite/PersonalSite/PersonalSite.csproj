@@ -194,6 +194,7 @@
     <Content Include="Views\Error\_404Error.cshtml" />
     <Content Include="Views\Error\_500Error.cshtml" />
     <Content Include="Views\Shared\_footer.cshtml" />
+    <Content Include="Views\Shared\_navbar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

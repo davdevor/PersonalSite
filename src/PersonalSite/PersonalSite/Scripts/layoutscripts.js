@@ -6,32 +6,36 @@ var LayoutHelper = (function ($) {
         navbuttonsIds: null,
         githubImageId: null,
         linkedinImageId: null,
-        lastClicked: null,
         onready: function () {
-            
+
             window.dataLayer = window.dataLayer || [];
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'UA-119836223-1');
 
             $(document).ready(function () { });
-            makeOpaqueListener($('#' +this.linkedinImageId)[0]);
-            makeOpaqueListener($('#' +this.githubImageId)[0]);
-            addHoverToNavButtons(this.navbuttonsIds);
+
+            makeOpaqueListener($('#' + this.linkedinImageId)[0]);
+            makeOpaqueListener($('#' + this.githubImageId)[0]);
             checkActiveNavButtons();
+            addHoverToNavButtons(this.navbuttonsIds);
         }
     };
     return module;
 
     // private
+
     function checkActiveNavButtons() {
         var segments = window.location.href.split("/");
         var buttonId;
-        var i = 3;
+        // /action
+        var segmentIndex = 3;
+
+        // /Home/action
         if (segments.length > 4) {
-            i = 4;
+            segmentIndex = 4;
         }
-        switch (segments[i]) {
+        switch (segments[segmentIndex]) {
             case "About":
             case "":
             case "Home":
@@ -51,27 +55,31 @@ var LayoutHelper = (function ($) {
                 break;
         }
         if (buttonId != -1) {
-            document.getElementById(module.navbuttonsIds[buttonId]).className = "btn btn-default btn-sm text-white background-secondary mg2";
+            document.getElementById(module.navbuttonsIds[i]).className = "primary background-secondary btn btn-default btn-sm text-white mg2";
         }
+
+
+
     }
     function addHoverToNavButtons(idsArray) {
         var tempButton;
         for (var i = 0; i < idsArray.length; ++i) {
             tempButton = document.getElementById(idsArray[i]);
             tempButton.addEventListener("mouseover", function () {
-                this.className = "btn btn-default btn-sm text-white background-secondary mg2";
+                if (!this.className.includes("primary", 0)) {
+                    this.className = "background-secondary btn btn-default btn-sm text-white mg2";
+                }
             });
             tempButton.addEventListener("mouseout", function () {
-                this.className = "btn btn-default btn-sm text-white mg2";
-                checkActiveNavButtons();
+                if (!this.className.includes("primary", 0)) {
+                    this.className = "btn btn-default btn-sm text-white mg2";
+
+                }
             });
-            tempButton.addEventListener("click", function () {
-                module.lastClicked = this.id;
-                var x = 5;
-            });
-            
+
         }
     }
+
     function makeOpaqueListener(image) {
         image.addEventListener("mouseover", function () {
             image.className = "img-opaque";
