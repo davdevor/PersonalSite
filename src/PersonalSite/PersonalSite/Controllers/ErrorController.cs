@@ -8,7 +8,7 @@ namespace PersonalSite.Controllers
 {
     public class ErrorController : Controller
     {
-        // GET: Error
+
         public ActionResult _404Error()
         {
             ViewBag.title = "404 Error";
@@ -23,6 +23,9 @@ namespace PersonalSite.Controllers
             return View();
         }
 
+
+        // the methods are used to throw http errors
+        // so I can verify that it reroutes to custom page
 #if DEBUG
         public ActionResult Throw404Error()
         {
