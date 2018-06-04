@@ -22,5 +22,18 @@ namespace PersonalSite.Controllers
             Response.StatusCode = 500;
             return View();
         }
+
+#if DEBUG
+
+        public ActionResult Throw404Error()
+        {
+            throw new HttpException(404, "404 Error");
+        }
+
+        public ActionResult Throw500Error()
+        {
+            throw new HttpException(500, "500 Error");
+        }
+#endif
     }
 }
