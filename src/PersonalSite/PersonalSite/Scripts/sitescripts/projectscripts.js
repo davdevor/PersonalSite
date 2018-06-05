@@ -8,7 +8,7 @@
     };
     return module;
 
-    // this method gets the labels for each prject and adds the hover and click events
+    // this method gets the labels for each project and adds the hover and click events
     function setupLabels(idsArray) {
         var tempLabel;
         for (var i = 0; i < idsArray.length; ++i) {
