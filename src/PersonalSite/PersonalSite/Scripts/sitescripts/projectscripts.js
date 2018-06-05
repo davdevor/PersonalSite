@@ -1,33 +1,22 @@
 ﻿var ProjectHelper = (function ($) {
     "use strict";
     var module = {
-        idsArray: null,
         onready: function () {
-            setupLabels(this.idsArray);
+            setupLabels();
         }
     };
     return module;
 
     // this method gets the labels for each project and adds the hover and click events
-    function setupLabels(idsArray) {
+    function setupLabels() {
         var tempLabel;
-        for (var i = 0; i < idsArray.length; ++i) {
-            tempLabel = $('#'+idsArray[i])[0];
-
-            changeLabelClassOnMouse(tempLabel);
-            tempLabel.addEventListener("click", function () {
-                // gets the data-link data from the label element
-                window.open(this.dataset.link);
-            });
-        }
-    }
-    // this method adds the hover effects to the labels
-    function changeLabelClassOnMouse(label) {
-        label.addEventListener("mouseover", function () {
-            label.className = "rounded mylabel-hover";
-        });
-        label.addEventListener("mouseout", function () {
-            label.className = "rounded mylabel";
+        $(".mylabel").mouseover(function () {
+            this.className = "rounded mylabel-hover";
+        }).mouseout(function () {
+            this.className = "rounded mylabel";
+        }).click(function () {
+            // gets the data-link data from the label element
+            window.open(this.dataset.link);
         });
     }
 })(jQuery);
