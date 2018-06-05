@@ -15,6 +15,7 @@ namespace PersonalSite
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            // this is added to register css and script bundles
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }

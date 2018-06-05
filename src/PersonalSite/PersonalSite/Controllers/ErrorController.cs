@@ -8,7 +8,10 @@ namespace PersonalSite.Controllers
 {
     public class ErrorController : Controller
     {
-
+        /// <summary>
+        /// Displays the 404 error page and sets the status code to 404
+        /// </summary>
+        /// <returns>A view</returns>
         public ActionResult _404Error()
         {
             ViewBag.title = "404 Error";
@@ -16,6 +19,10 @@ namespace PersonalSite.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Displays the 500 error page and sets the status code to 500
+        /// </summary>
+        /// <returns>A view</returns>
         public ActionResult _500Error()
         {
             ViewBag.title = "500 Error";
