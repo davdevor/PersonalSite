@@ -2,12 +2,17 @@
 
     <div class="text-center container-fluid">
         <p>This is our server it is having some problems right now</p>
-        <button class="rounded download-link mx-auto" onclick="goBack()">Go Back</button>
+        <button class="rounded download-link mx-auto" id="backbutton">Go Back</button>
         <img src="~/Files/server-died.jpg" />
     </div>
 </div>
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+@section Scripts{
+    @System.Web.Optimization.Scripts.Render("~/Scripts/errorscripts")
+    <script>
+        (function (helper) {
+            $(function () {
+                helper.onready();
+            });
+        }(ErrorHelper));
+    </script>
+}

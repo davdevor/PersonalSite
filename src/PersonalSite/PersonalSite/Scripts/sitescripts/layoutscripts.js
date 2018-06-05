@@ -3,7 +3,7 @@
     var module = {
         navbuttonsIds: null,
         onready: function () {
-            
+
             makeOpaqueListener();
             checkActiveNavButtons();
             addHoverToDefaultButtons();
@@ -17,11 +17,14 @@
         var segments = window.location.href.split("/");
         var buttonId;
         // the fourth segment at pos 3 is the actionmethod
-        var segmentIndex = 3;
+        var segmentIndex;
 
         // if length is greater than four then url is like /Home/action and the action method is fifth at pos 4
         if (segments.length > 4) {
             segmentIndex = 4;
+        }
+        else {
+            segmentIndex = 3;
         }
         switch (segments[segmentIndex]) {
             // these first cases refer to the home or default page
@@ -56,7 +59,7 @@
             if (!this.className.includes("primary", 0)) {
                 this.className = "background-secondary btn btn-default btn-sm text-white mg2";
             }
-        },function () {
+        }, function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
                 this.className = "btn btn-default btn-sm text-white mg2";
@@ -68,7 +71,7 @@
     function makeOpaqueListener() {
         $(".footer-img").hover(function () {
             this.className = "img-opaque";
-        },function () {
+        }, function () {
             this.className = "";
         });
     }
