@@ -12,7 +12,7 @@
         var tempLabel;
         $(".mylabel").hover(function () {
             this.className = "rounded mylabel-hover";
-        },function () {
+        }, function () {
             this.className = "rounded mylabel";
         }).click(function () {
             // gets the data-link data from the label element

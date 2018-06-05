@@ -3,7 +3,7 @@
     var module = {
         navbuttonsIds: null,
         onready: function () {
-            
+
             makeOpaqueListener();
             checkActiveNavButtons();
             addHoverToDefaultButtons();
@@ -59,7 +59,7 @@
             if (!this.className.includes("primary", 0)) {
                 this.className = "background-secondary btn btn-default btn-sm text-white mg2";
             }
-        },function () {
+        }, function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
                 this.className = "btn btn-default btn-sm text-white mg2";
@@ -71,7 +71,7 @@
     function makeOpaqueListener() {
         $(".footer-img").hover(function () {
             this.className = "img-opaque";
-        },function () {
+        }, function () {
             this.className = "";
         });
     }
