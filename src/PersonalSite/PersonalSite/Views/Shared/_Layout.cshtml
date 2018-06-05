@@ -16,15 +16,12 @@
 
     @System.Web.Optimization.Styles.Render("~/Content/bootstrapcss")
     @System.Web.Optimization.Styles.Render("~/Content/sitecss")
-
 </head>
 <body>
     @{Html.RenderPartial("_navbar"); }
     <div class="container-fluid body-content">
         @RenderBody()
         <hr />
-
-
     </div>
     @{Html.RenderPartial("_footer"); }
 

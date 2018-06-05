@@ -2,12 +2,17 @@
 
     <div class="text-center container-fluid">
         <p>Something went wrong</p>
-        <button class="rounded download-link mx-auto" onclick="goBack()">Go Back</button>
+        <button class="rounded download-link mx-auto" id="backbutton">Go Back</button>
         <img class="" src="~/Files/nomemory.png" />
     </div>
 </div>
+@section Scripts{
+@System.Web.Optimization.Scripts.Render("~/Scripts/errorscripts")
 <script>
-    function goBack() {
-        window.history.back();
-    }
+    (function (helper) {
+        $(function () {
+            helper.onready();
+        });
+    }(ErrorHelper));
 </script>
+    }

@@ -15,6 +15,7 @@ namespace PersonalSite.App_Start
             bundles.Add(new ScriptBundle("~/Scripts/layoutscripts").Include("~/Scripts/sitescripts/layoutscripts.js"));
             bundles.Add(new ScriptBundle("~/Scripts/projectscripts").Include("~/Scripts/sitescripts/projectscripts.js"));
             bundles.Add(new ScriptBundle("~/Scripts/resumescripts").Include("~/Scripts/sitescripts/resumescript.js"));
+            bundles.Add(new ScriptBundle("~/Scripts/errorscripts").Include("~/Scripts/sitescripts/errorscripts.js"));
 
             // css
             bundles.Add(new StyleBundle("~/Content/bootstrapcss", "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css").Include("~/Content/bootstrap.min.css"));
