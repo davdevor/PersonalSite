@@ -113,9 +113,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Files\GitHub-Mark-32px.png" />
     <Content Include="Files\In-Black-34px-R.png" />
+    <Content Include="Files\me.png" />
     <Content Include="Files\nomemory.png" />
     <Content Include="Files\server-died.jpg" />
-    <Content Include="Files\testimage.png" />
     <Content Include="Files\userlogo.png" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
