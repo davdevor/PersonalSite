@@ -7,9 +7,23 @@
             makeOpaqueListener();
             checkActiveNavButtons();
             addHoverToDefaultButtons();
+            setNavbar();
         }
     };
     return module;
+
+    // makes the navbar always on the bottom of the page
+    function setNavbar() {
+        // get the heigh of the window subtract from that the height of the nav bar and the height of the footer
+        // that gives you the height of how much margin to put on the footer
+        var footer = $("#footer");
+        var docHeight = $(window).height();
+        var footerTop = footer.position().top + footer.height();
+        if (footerTop < docHeight) {
+            footer.css('margin-top', 10 + (docHeight - footerTop - $('#navbar').height()) + 'px');
+        }
+        footer.removeClass("hidden");
+    }
 
     // this method sets the active nav button based on the url
     // it gets the action and sets the active button based on that
