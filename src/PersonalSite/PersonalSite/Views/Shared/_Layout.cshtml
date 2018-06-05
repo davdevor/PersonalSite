@@ -21,7 +21,6 @@
     @{Html.RenderPartial("_navbar"); }
     <div class="container-fluid body-content">
         @RenderBody()
-        <hr />
     </div>
     @{Html.RenderPartial("_footer"); }
 
@@ -36,6 +35,6 @@
             });
         }(LayoutHelper));
     </script>
-    @RenderSection("Scripts", false);
+    @RenderSection("Scripts", false)
 </body>
 </html>
