@@ -19,9 +19,9 @@
 </head>
 <body>
     @{Html.RenderPartial("_navbar"); }
-    <div class="container-fluid body-content">
+    <div class="container-fluid body-content wrapper">
         @RenderBody()
-        <hr />
+        <div class="push"></div>
     </div>
     @{Html.RenderPartial("_footer"); }
 
