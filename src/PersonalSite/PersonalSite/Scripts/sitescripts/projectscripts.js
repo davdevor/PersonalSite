@@ -10,9 +10,9 @@
     // this method gets the labels for each project and adds the hover and click events
     function setupLabels() {
         var tempLabel;
-        $(".mylabel").mouseover(function () {
+        $(".mylabel").hover(function () {
             this.className = "rounded mylabel-hover";
-        }).mouseout(function () {
+        },function () {
             this.className = "rounded mylabel";
         }).click(function () {
             // gets the data-link data from the label element
