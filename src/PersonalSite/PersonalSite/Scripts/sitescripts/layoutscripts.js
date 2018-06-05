@@ -17,11 +17,14 @@
         var segments = window.location.href.split("/");
         var buttonId;
         // the fourth segment at pos 3 is the actionmethod
-        var segmentIndex = 3;
+        var segmentIndex;
 
         // if length is greater than four then url is like /Home/action and the action method is fifth at pos 4
         if (segments.length > 4) {
             segmentIndex = 4;
+        }
+        else {
+            segmentIndex = 3;
         }
         switch (segments[segmentIndex]) {
             // these first cases refer to the home or default page
