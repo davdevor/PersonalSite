@@ -3,7 +3,7 @@
     var module = {
         downloadresumeId: null,
         onready: function () {
-            // use [] to get the dom object out of the jquery object that is returned
+            // set the hover actions
             $('#' + this.downloadresumeId).hover(function () {
                 this.className = "rounded mx-auto mylabel-hover";
             }, function () {
