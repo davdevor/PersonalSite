@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     <link rel="icon" href="~/Files/userlogo.png">
-
     @System.Web.Optimization.Styles.Render("~/Content/bootstrapcss")
     @System.Web.Optimization.Styles.Render("~/Content/sitecss")
 </head>
@@ -23,7 +22,6 @@
         @RenderBody()
     </div>
     @{Html.RenderPartial("_footer"); }
-
     @System.Web.Optimization.Scripts.Render("~/Scripts/jquery")
     @System.Web.Optimization.Scripts.Render("~/Scripts/bootstrapjs")
     @System.Web.Optimization.Scripts.Render("~/Scripts/layoutscripts")
