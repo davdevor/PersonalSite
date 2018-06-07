@@ -31,8 +31,6 @@
     // it gets the action and sets the active button based on that
     function checkActiveNavButtons() {
         var segments = window.location.href.split("/");
-        var buttonId;
-        // the fourth segment at pos 3 is the actionmethod
         var segmentIndex;
 
         // if length is greater than four then url is like /Home/action and the action method is fifth at pos 4
@@ -40,6 +38,7 @@
             segmentIndex = 4;
         }
         else {
+            // the fourth segment at pos 3 is the actionmethod
             segmentIndex = 3;
         }
         var buttons = $(".nav-button");
