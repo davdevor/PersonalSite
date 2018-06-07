@@ -8,14 +8,16 @@
                 this.className = "rounded mx-auto mylabel-hover";
             }, function () {
                 this.className = "rounded mx-auto mylabel";
-            }).click(function () {
-                ga('send', 'event', 'Resume Downloads', 'Click', 'Resume Download');
-                // sets the location of the current window
-                // routes handle it going to the action method to download the pdf
-                window.location = "Home/DownloadResume";
+            }).click(function (event) {
+                event.preventDefault();
+                ga('send', 'event', 'Resume Download', 'click', {
+                    // use callback so request doesn't  cancel
+                    hitCallback: function () {
+                        window.location = "Home/DownloadResume";
+                    }
+                });
             });
         }
-
     };
     return module;
 
