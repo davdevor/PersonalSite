@@ -40,29 +40,20 @@
         else {
             segmentIndex = 3;
         }
-        switch (segments[segmentIndex]) {
-            // these first cases refer to the home or default page
-            case "About":
-            case "":
-            case "Home":
-                buttonId = 0;
+        var buttons = $(".nav-button");
+        for (var i = 0; i < buttons.length; ++i) {
+            if (buttons[i].text === segments[segmentIndex]) {
+                buttons[i].className = "primary background-secondary btn btn-default btn-sm text-white mg2 nav-button";
                 break;
-            case "Projects":
-                buttonId = 1;
-                break;
-            case "Resume":
-                buttonId = 2;
-                break;
-            case "Contact":
-                buttonId = 3;
-                break;
-            default:
-                buttonId = -1;
-                break;
+            }
         }
-        // if buttonId is equal to -1 then it is not on any of the pages in the nav bar so you don't set any of them to the primary
-        if (buttonId != -1) {
-            document.getElementById(module.navbuttonsIds[buttonId]).className = "primary background-secondary btn btn-default btn-sm text-white mg2";
+        if (segments[segmentIndex] === "" || segments[segmentIndex] === "Home") {
+            for (var i = 0; i < buttons.length; ++i) {
+                if (buttons[i].text === "About") {
+                    buttons[i].className = "primary background-secondary btn btn-default btn-sm text-white mg2 nav-button";
+                    break;
+                }
+            }
         }
     }
 
@@ -71,12 +62,12 @@
         $(".btn-default").hover(function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
-                this.className = "background-secondary btn btn-default btn-sm text-white mg2";
+                this.className = "background-secondary btn btn-default btn-sm text-white mg2 nav-button";
             }
         }, function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
-                this.className = "btn btn-default btn-sm text-white mg2";
+                this.className = "btn btn-default btn-sm text-white mg2 nav-button";
             }
         });
     }

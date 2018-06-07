@@ -15,7 +15,7 @@ namespace PersonalSite
             // if user navigates to /Contact it will take them to /Home/ContactInfo
             routes.MapRoute(name: "Contact", url: "Contact", defaults: new { controller = "Home", action = "ContactInfo" });
             // /Home takes you to Home/About
-            routes.MapRoute(name: "Home", url: "Home", defaults: new { controller = "Home", action = "about" });
+            routes.MapRoute(name: "About", url: "Home", defaults: new { controller = "Home", action = "About" });
             // /action take you to /Home/action
             routes.MapRoute(name: "HomeAction", url: "{action}", defaults: new { controller = "Home" });
             routes.MapRoute(
