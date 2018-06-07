@@ -28,7 +28,9 @@
     <script>
         (function (helper) {
             $(function () {
-                helper.navbuttonsIds = ["nv1", "nv2", "nv3", "nv4"];
+                helper.defaultButtonClasses = "btn btn-default btn-sm text-white mg2 nav-button";
+                helper.activeButtonClasses = "primary background-secondary btn btn-default btn-sm text-white mg2 nav-button";
+                helper.hoverButtonClasses = "background-secondary btn btn-default btn-sm text-white mg2 nav-button";
                 helper.onready();
             });
         }(LayoutHelper));

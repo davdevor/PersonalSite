@@ -1,7 +1,9 @@
 ﻿var LayoutHelper = (function ($) {
     "use strict";
     var module = {
-        navbuttonsIds: null,
+        defaultButtonClasses: null,
+        activeButtonClasses: null,
+        hoverButtonClasses: null,
         onready: function () {
 
             makeOpaqueListener();
@@ -20,7 +22,7 @@
         var docHeight = $(window).height();
         var footerTop = footer.position().top + footer.height();
         if (footerTop < docHeight) {
-            footer.css('margin-top', 10 + (docHeight - footerTop - $('#navbar').height()) + 'px');
+            footer.css('margin-top', (docHeight - footerTop - $('#navbar').height()) + 'px');
         }
         footer.removeClass("hidden");
     }
@@ -43,31 +45,31 @@
         var buttons = $(".nav-button");
         for (var i = 0; i < buttons.length; ++i) {
             if (buttons[i].text === segments[segmentIndex]) {
-                buttons[i].className = "primary background-secondary btn btn-default btn-sm text-white mg2 nav-button";
-                break;
+                buttons[i].className = module.activeButtonClasses;
+                return;
             }
         }
         if (segments[segmentIndex] === "" || segments[segmentIndex] === "Home") {
             for (var i = 0; i < buttons.length; ++i) {
                 if (buttons[i].text === "About") {
-                    buttons[i].className = "primary background-secondary btn btn-default btn-sm text-white mg2 nav-button";
-                    break;
+                    buttons[i].className = module.activeButtonClasses;
+                    return;
                 }
             }
         }
     }
 
-    // this method is used to add a change color hover effect tot the nav buttons
+    // this method is used to add a change color hover effect to the default buttons
     function addHoverToDefaultButtons() {
         $(".btn-default").hover(function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
-                this.className = "background-secondary btn btn-default btn-sm text-white mg2 nav-button";
+                this.className = module.hoverButtonClasses;
             }
         }, function () {
             // if the moused over button is the primary button don't change it's class
             if (!this.className.includes("primary", 0)) {
-                this.className = "btn btn-default btn-sm text-white mg2 nav-button";
+                this.className = module.defaultButtonClasses;
             }
         });
     }
