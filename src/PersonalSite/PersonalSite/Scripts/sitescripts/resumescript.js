@@ -11,7 +11,7 @@
             }).click(function (event) {
                 event.preventDefault();
                 ga('send', 'event', 'Resume Download', 'click', {
-                    // use callback so request doesn't  cancel
+                    // use callback so request doesn't cancel
                     hitCallback: function () {
                         window.location = "Home/DownloadResume";
                     }
